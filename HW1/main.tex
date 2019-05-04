@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & François Févotte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{ctexart}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{caption,subcaption}
+\usepackage{algpseudocode}
+\usepackage[section]{placeins}
+\usepackage{changepage}
+
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{hw1} % Title of the assignment
+
+\author{张吉祺\\ \texttt{16340286}} % Author name and email address
+
+\date{中山大学 --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section{My understanding of Computer Graphics}
+Computer Graphics is the science and technology of synthesis of visual content on computer screen, which includes modeling, rendering, processing, animation and human-computer interaction. The research hotspots are facilitating the modeling for common user, making the modeling and rendering more efficient as well as developing the interactive techniques, which begins to be stressed on these years.
+
+\section{}
+\subsection{What Is OpenGL?}
+OpenGL is mainly considered an API (an Application Programming Interface) that provides us with a large set of functions that we can use to manipulate graphics and images. However, OpenGL by itself is not an API, but merely a specification, developed and maintained by the Khronos Group.
+
+\subsection{What Is OpenGL ES?}
+OpenGL ES is a royalty-free, cross-platform API for rendering advanced 2D and 3D graphics on embedded and mobile systems - including consoles, phones, appliances and vehicles. It consists of a well-defined subset of desktop OpenGL suitable for low-power devices, and provides a flexible and powerful interface between software and graphics acceleration hardware.
+
+\subsection{What Is Web GL?}
+WebGL is a cross-platform, royalty-free web standard for a low-level 3D graphics API based on OpenGL ES, exposed to ECMAScript via the HTML5 Canvas element. Developers familiar with OpenGL ES 2.0 will recognize WebGL as a Shader-based API using GLSL, with constructs that are semantically similar to those of the underlying OpenGL ES API. It stays very close to the OpenGL ES specification, with some concessions made for what developers expect out of memory-managed languages such as JavaScript. WebGL 1.0 exposes the OpenGL ES 2.0 feature set; WebGL 2.0 exposes the OpenGL ES 3.0 API.
+
+WebGL brings plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Microsoft (Edge), and Mozilla (Firefox) are members of the WebGL Working Group.
+
+\subsection{What Is Vulkan?}
+Vulkan is a new generation graphics and compute API that provides high-efficiency, cross-platform access to modern GPUs used in a wide variety of devices from PCs and consoles to mobile phones and embedded platforms.
+
+\subsection{What Is DirectX?}
+First released in 1995, DirectX is a set of APIs developed by Microsoft that allows software to write instructions directly to audio and video hardware, improving multimedia performance. Games that include DirectX have the capability of utilizing multimedia and graphics accelerator features more efficiently.
+
+\section{What Are The Roles of $gl.h$, $glu.h$ And $glew.h$
+?}
+\paragraph{$gl.h$}The OpenGL functions and constants declaration.
+\paragraph{$glu.h$}GLU is the OpenGL Utility Library. This is a set of functions to create texture mipmaps from a base image, map coordinates between screen and object space, and draw quadric surfaces and NURBS.
+\paragraph{$glew.h$}The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library. GLEW provides efficient run-time mechanisms for determining which OpenGL extensions are supported on the target platform. OpenGL core and extension functionality is exposed in a single header file. GLEW has been tested on a variety of operating systems, including Windows, Linux, Mac OS X, FreeBSD, Irix, and Solaris.
+
+
+\section{What Are the purposes of Using $GLFW$ And $freeglut$?}
+\paragraph{$GLFW$} An Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events. It is written in C and has native support for Windows, macOS and many Unix-like systems using the X Window System, such as Linux and FreeBSD.
+\paragraph{$freeglut$} A free-software/open-source alternative to the OpenGL Utility Toolkit (GLUT) library, which takes care of all the system-specific chores required for creating windows, initializing OpenGL contexts, and handling input events, to allow for trully portable OpenGL programs.
+
+\section{A SIGGRAPH 2018 Topic - Semantic Soft Segmentation}
+\subsection{What Is The Work of It?}
+An accurately automated process operating segmentation on a given image, which is separated to serveral regions according to their respective semantic meanings and assigned different solid colors. Consequently, a region of object can be transited into other novel object, whose contribution is to liberate the art works from the tedious image editing tasks.
+\subsection{Techniques Involved}
+First estimate feature vectors representing the semantic regions in the image using a network trained for the semantic segmentation. Then construct graph structure with the laplacian which represents the soft transition. Add non-local color affinities and finally semantic affinities using the features, fusing the high level information with low level cues. The corresponding laplacian matrix reveals the semantic objects with the soft transitions between them readily in eigenvectors, used to estimate a set of initial layers that are combined using the feature vectors for a compact representation. Finalize the segment by a relax map sparsification whose optimization results can used for image editing.
+
+\end{document}

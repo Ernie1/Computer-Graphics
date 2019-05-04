@@ -1,0 +1,4 @@
+camera roaming + sky box + display text + anti-aliasing//张吉祺 第三人称，天空盒（光照？），操作方法，路标，
+simple lighting and shading + complex lighting + stencil Test//张星 太阳光(水面上，水底下，丁达尔效应)，对元素的影响，鱼可能有高光
+Texture mapping + model import and mesh viewing + skeletal animation + 织物模拟//姚雪辉 海带（撞开效果？），鱼（4-5）种,石头,地形,海草，小珊瑚，
+shadow mapping +  particle system + Collision Detection* + fluid simulation //朱逸渠 泡泡（光照？），水面（水流？），小碎屑，沙层
