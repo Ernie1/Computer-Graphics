@@ -20,32 +20,6 @@ void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
     move_y = ypos;
 }
 
-double factorial(int n)
-{
-    int fact = 1;
-    for (int i = 1; i <= n; ++i)
-        fact = fact * i;
-    return (double) fact;
-}
-
-//void make_bezier()
-//{
-//    bezier_points.clear();
-//    int n = (int) main_nodes.size() - 1;
-//    for (double t = 0; t <= 1; t += 0.001)
-//    {
-//        double x = 0, y = 0;
-//        for (int i = 0; i <= n; ++i)
-//        {
-//            double B = factorial(n) / factorial(i) / factorial(n - i) *
-//            pow(t, i) * pow((1 - t), (n - i));
-//            x += main_nodes[i].first * B;
-//            y += main_nodes[i].second * B;
-//        }
-//        bezier_points.push_back(std::pair<double, double>(x, y));
-//    }
-//}
-
 void draw_process(std::vector<std::pair<double, double>> nodes, double t)
 {
     if (nodes.size() < 2)
@@ -98,7 +72,6 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
                 main_nodes.pop_back();
                 break;
         }
-//        make_bezier();
     }
 }
 
